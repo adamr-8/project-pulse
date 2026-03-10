@@ -129,7 +129,6 @@ body {
 <body>
 
 <div id="header">
-  <!-- McGill logo — inline SVG, no external dependency -->
   <div class="logo-wrap">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 904.15 245.08">
       <polygon points="296.35 170.47 275.2 170.47 275.2 155.79 263.72 155.79 263.72 195.74 275.2 195.74 275.2 178.77 296.35 178.77 296.35 195.74 307.83 195.74 307.83 155.79 296.35 155.79 296.35 170.47" style="fill:#fff"/>
@@ -174,7 +173,7 @@ body {
     <div class="sk-item"><div class="sk-dot" style="background:var(--orange);box-shadow:0 0 4px var(--orange)"></div>Delayed</div>
     <div class="sk-item"><div class="sk-dot" style="background:var(--red);box-shadow:0 0 4px var(--red)"></div>Blocked</div>
   </div>
-  <div class="f-note">Mock data &mdash; Monday.com API integration pending</div>
+  <div class="f-note">Live data &mdash; Monday.com API integration in progress with Wesley Crouch</div>
 </div>
 
 <div id="top-row">
@@ -203,28 +202,28 @@ body {
 
 <script>
 var DATA = {
-  meta: { weekLabel: "Week of Mar 5, 2026", dataDate: "Data as of Mar 5, 2026" },
+  meta: { weekLabel: "Week of Mar 9, 2026", dataDate: "Data as of Mar 9, 2026" },
   charters: [
-    { name: "Ship-To & Contact", lead: "Richard Duboise", sentiment: "yellow", sentimentWord: "Review",
-      done: 2, active: 0, delayed: 0, todo: 15, startDate: "Feb 24", endDate: "Mar 28",
-      blurb: "Groundwork kicking off this week — pulling contact and ship-to lists for all 10 pilot customers, and establishing the required fields for e-comm checkout.",
-      newTasks: ["Establish fields needed for E-Comm Contact", "Pull contact & ship-to lists for pilot customers", "Delegate information gathering"] },
+    { name: "Ship-To & Contact", lead: "Richard Duboise", sentiment: "green", sentimentWord: "Current",
+      done: 2, active: 3, delayed: 0, todo: 13, startDate: "Feb 24", endDate: "Mar 28",
+      blurb: "Both Customer and Ship-To data sets now in hand. Already validated 80% of addresses with USPS database. Will review for duplicates and correct any with errors.",
+      newTasks: ["Establish all Fields needed for E-Comm Contact & Ship-To", "Pull Contact & Ship-To Lists for Pilot Customers", "Establish Data Validation Rules (what is a valid address?)", "Identify Duplicates — Ship-To & Contacts"] },
     { name: "Item Descriptions", lead: "Richard Duboise", sentiment: "green", sentimentWord: "Current",
-      done: 2, active: 1, delayed: 0, todo: 5, startDate: "Feb 19", endDate: "Mar 28",
-      blurb: "First cleanup assignment is live — Eric, Austin, and Craig working through dot and slash description fixes. Description rules being defined in parallel this week.",
-      newTasks: ["Assignment 1: eliminate dot/slash descriptions", "Create rules for what a good description looks like"] },
-    { name: "Weights & Dimensions", lead: "James Haire", sentiment: "yellow", sentimentWord: "Review",
-      done: 5, active: 0, delayed: 0, todo: 23, startDate: "Feb 19", endDate: "Apr 17",
-      blurb: "Clean starting data set secured from Wesley this week — unblocking the next phase. UOM tagging and supplier query work queued and ready to begin.",
-      newTasks: ["Tag starting data set items with UPDATES class"] },
-    { name: "Pricing", lead: "James Haire", sentiment: "yellow", sentimentWord: "Review",
-      done: 8, active: 5, delayed: 1, todo: 10, startDate: "Feb 19", endDate: "Apr 17",
-      blurb: "Library discovery meeting surfaced many findings. Five tasks actively in progress across library structure and contracts vetting. One item delayed pending corrected source data.",
-      newTasks: ["Address new issues from Library discovery", "Set up Libraries in P21", "Vet if existing contracts apply to pilot customers"] }
+      done: 4, active: 2, delayed: 0, todo: 3, startDate: "Feb 19", endDate: "Mar 28",
+      blurb: "Data set available and being worked through. Missing descriptions filled in. Next: establishing naming rules and chunking out data for team processing.",
+      newTasks: ["Assignment 1 — Eliminate dot/slash descriptions (Eric, Austin, Craig)", "Create rules for what a good description looks like", "Update descriptions per new standards"] },
+    { name: "Weights & Dimensions", lead: "James Haire", sentiment: "green", sentimentWord: "Current",
+      done: 11, active: 0, delayed: 0, todo: 24, startDate: "Feb 19", endDate: "Apr 17",
+      blurb: "Initial stage of discovery moving along well. Team is establishing data standards and updating missing and incomplete records.",
+      newTasks: ["UOM: Match P21 SKUs to PIM SKUs with Dimensions", "Pull Starting P21 Item Classes for Pilot Set & Store", "UOM: Tag Starting Data Set Items with UPDATES Class", "UOM: Vet & Map UOM Fields P21 to PIM"] },
+    { name: "Pricing", lead: "James Haire", sentiment: "green", sentimentWord: "Current",
+      done: 13, active: 5, delayed: 0, todo: 9, startDate: "Feb 19", endDate: "Apr 17",
+      blurb: "Pricing program structure defined. P21 framework established. Team rationalizing existing pricing programs for retention and supplementation.",
+      newTasks: ["Address Library Discovery Issues from P21 meeting", "Set Up Libraries in P21", "Establish Contract Upload Template Format", "Create New Contract Sheets per Customer & Store Centrally"] }
   ],
   americanEagle: {
-    phase: "Discovery & Design — Sessions 1–4 Active", completePct: 25,
-    hoursRemaining: 278, hoursTotal: 310,
+    phase: "Discovery & Design — Sessions 1–4 Complete", completePct: 28,
+    hoursRemaining: 260, hoursTotal: 310,
     schedule: "On Track", scope: "On Track", budget: "On Track",
     lead: "Wesley Crouch",
     gateLabel: "McGill Business Requirements", gateDue: "Mar 13, 2026"
@@ -234,7 +233,7 @@ var DATA = {
     milestones: [
       { name: "Kickoff",       date: "Feb 24", status: "done"    },
       { name: "Biz Req Due",   date: "Mar 13", status: "current" },
-      { name: "Disc/end",     date: "Mar 20", status: "future"  },
+      { name: "Disc. End",     date: "Mar 20", status: "future"  },
       { name: "Phase 1 End",   date: "Apr 24", status: "future"  },
       { name: "Phase 2",       date: "TBD",    status: "future"  },
       { name: "Phase 3",       date: "TBD",    status: "future"  }
